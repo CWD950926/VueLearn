@@ -1,3 +1,7 @@
+需要自己安装npm依赖
+进入项目 cd 项目名 ，命令：cnpm install，安装依赖。
+
+
 # zero-start
 
 > A Vue.js project
@@ -17,5 +21,3 @@ npm run build
 # build for production and view the bundle analyzer report
 npm run build --report
 ```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
