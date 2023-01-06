@@ -1,7 +1,8 @@
 <template>
   <div class="fitness">
     <p><router-link to="/">返回首页</router-link></p>
-    <p><router-link to="/FitnessChildren">转向A1</router-link></p>
+    <p><router-link to="/fitnessChildren">转向子页面</router-link></p>
+    <p><router-view></router-view></p>
     <h1>{{ msg }}</h1>
 
     <table>

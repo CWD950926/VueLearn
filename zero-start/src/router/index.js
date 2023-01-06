@@ -18,13 +18,13 @@ export default new Router({
       component: HelloWorld
     },
     {
-      path: '/Fitness',
+      path: '/fitness',
       name: 'Fitness',
       component: Fitness,
       children:[
         {
-          path:'/FitnessChildren',
-          component: Fitness,
+          path:'/fitnessChildren',
+          component: FitnessChildren
         }
       ]
     }
