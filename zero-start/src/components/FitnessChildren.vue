@@ -1,29 +1,18 @@
 <template>
-  <div class="fitness">
+  <div class="fitnessChrldren">
+    <p>这是子页面A1</p>
+    <p><router-link to="/Fitness">返回父页面A</router-link></p>
     <p><router-link to="/">返回首页</router-link></p>
-    <p><router-link to="/FitnessChildren">转向A1</router-link></p>
-    <h1>{{ msg }}</h1>
-
-    <table>
-      <tr>
-        <th>日期</th>
-        <th>早</th>
-        <th>中</th>
-        <th>晚</th>
-        <th>运动步数</th>
-        <th>体重</th>
-      </tr>
-    </table>
 
   </div>
 </template>
 
 <script>
 export default {
-  name: "Fitness",
+  name: "FitnessChildren",
   data() {
     return {
-      msg: "2023 LOSE WEIGHT",
+      msg: "子页面",
     };
   },
 };

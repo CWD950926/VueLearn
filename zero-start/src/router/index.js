@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import Fitness from '@/components/Fitness'
+import FitnessChildren from '@/components/FitnessChildren'
 
 Vue.use(Router)
 
@@ -19,7 +20,13 @@ export default new Router({
     {
       path: '/Fitness',
       name: 'Fitness',
-      component: Fitness
+      component: Fitness,
+      children:[
+        {
+          path:'/FitnessChildren',
+          component: Fitness,
+        }
+      ]
     }
   ]
 })
