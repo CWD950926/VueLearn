@@ -1,14 +1,8 @@
 <template>
   
   <div class="hello">
-  
     <h1>{{ msg }}</h1>
-
     <h2>01.03 - 01.31</h2>
-    <!-- <ul style="display:inline-block; color: #ddd">
-
-    <li>（）特步版：添加好友发送申请，如好友没有通过申请，间隔时间段后自动再向未申请通过的好友发送二次申请</li>
-    </ul> -->
     <table>
       <tr>
         <th>时间</th>
@@ -97,13 +91,16 @@ h2 {
 ul {
   list-style-type: none;
   padding: 0;
+  text-decoration:none
 }
 li {
   display: inline-block;
   margin: 0 10px;
+  text-decoration:none
 }
 a {
   color: #42b983;
+  text-decoration:none
 }
 .hello{
   padding: 10px;
