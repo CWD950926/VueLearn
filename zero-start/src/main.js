@@ -3,6 +3,13 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+// import { createApp } from 'vue'
+// import ElementPlus from 'element-plus';
+// import 'element-plus/lib/theme-chalk/index.css';
+// import App from './App.vue';
+// const app = createApp(App)
+// app.use(ElementPlus)
+// app.mount('#app')
 
 Vue.config.productionTip = false
 

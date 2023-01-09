@@ -1,17 +1,15 @@
 <template>
-  <div class="fitnessChrldren">
-    <p>这是子页面</p>
-    <p><router-link to="/fitness">返回父页面</router-link></p>
-    <p><router-link to="/">返回首页</router-link></p>
+  <div class="todoList">
+    <h1>{{ msg }}</h1>
   </div>
 </template>
 
 <script>
 export default {
-  name: "FitnessChildren",
+  name: "TodoList",
   data() {
     return {
-      msg: "子页面",
+      msg: "待办事项",
     };
   },
 };

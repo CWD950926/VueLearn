@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import Fitness from '@/components/Fitness'
 import FitnessChildren from '@/components/FitnessChildren'
+import TodayPlan from '@/components/TodayPlan'
 
 Vue.use(Router)
 
@@ -27,6 +28,11 @@ export default new Router({
           component: FitnessChildren
         }
       ]
+    },
+    {
+      path: '/todayPlan',
+      name: 'TodayPlan',
+      component: TodayPlan
     }
   ]
 })
