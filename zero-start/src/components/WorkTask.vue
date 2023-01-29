@@ -1,14 +1,6 @@
 <template>
-  <div class="todoList">
+  <div class="workTask">
     <h1>{{ msg }}</h1>
-    <section class="jumbotron">
-		<h3 class="jumbotron-heading">查询任务</h3>
-		<div>
-			<input type="text" placeholder="任务id" v-model="keyWord"/>&nbsp;
-			<button @click="searchUsers">查询</button>
-		</div>
-	</section>
-
     <el-table
       :data="tableData"
       style="width: 80%">
@@ -39,21 +31,37 @@
       </el-table-column>
     </el-table>
   </div>
+
+
+
 </template>
 
 <script>
 import axios from 'axios'
-
 export default {
-  name: "todoList",
+  name: "workTask",
   data() {
     return {
-      msg: "待办事项",
-      keyWord:''
-
+      msg: "开发任务",
+      keyWord:'',
+      tableData:[]
     };
   },
-
+  methods: {
+    search(){
+      //请求前更新List的数据
+      axios.get(`http://127.0.0.1:8082/life/v1/work-task/m/findList`).then(
+        res => {
+          alert('请求成功');
+          console.log('请求成功了',res.data.data)
+         
+        },
+        error => {
+          alert('请求失败');
+        }
+      )
+    }
+  },
 };
 </script>
 
@@ -66,12 +74,22 @@ h2 {
 ul {
   list-style-type: none;
   padding: 0;
+  text-decoration:none
 }
 li {
   display: inline-block;
   margin: 0 10px;
+  text-decoration:none
 }
 a {
   color: #42b983;
+  text-decoration:none
+}
+.workTask{
+  padding: 10px;
+  background-color: #2B2C30;
+}
+table, th, td {
+    border: 1px solid black;
 }
 </style>

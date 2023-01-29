@@ -8,10 +8,10 @@
     </ul>
 
     <section class="jumbotron">
-		<h3 class="jumbotron-heading">暂停老百姓任务</h3>
+		<h3 class="jumbotron-heading">查询任务</h3>
 		<div>
 			<input type="text" placeholder="任务id" v-model="keyWord"/>&nbsp;
-			<button @click="searchUsers">暂停</button>
+			<button @click="searchUsers">查询</button>
 		</div>
 	</section>
   </div>
@@ -19,6 +19,7 @@
 
 <script>
 import axios from 'axios'
+
 export default {
   name:'TodayPlan',
   data() {
@@ -28,20 +29,17 @@ export default {
   },
   methods: {
     searchUsers(){
-      if(this.keyWord === ''){
-        alert('请输入参数');
-      }else{
       //请求前更新List的数据
-      axios.get(`http://test.wefanbot.com:18994/scrm/test/p/lbxStopTask?third=${this.keyWord}`).then(
-        response => {
+      axios.get(`http://127.0.0.1:8082/life/v1/work-task/m/findList`).then(
+        res => {
           alert('请求成功');
-          console.log('请求成功了',{response})
+          console.log('请求成功了',res.data.data)
+         
         },
         error => {
           alert('请求失败');
         }
       )
-      }
     }
   },
 }
