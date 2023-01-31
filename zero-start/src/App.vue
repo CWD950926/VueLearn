@@ -5,10 +5,16 @@
       <h1>微分机器人</h1>
     </div>
     <div class="navigationLeft">
-      <ul id="nav" class="nav navbar-nav">
+      <ul id="nav">
         <li><router-link to="/">工作任务</router-link></li>
         <li><router-link to="/todoList">待办事项</router-link></li>
         <li><router-link to="/todayPlan">今日计划</router-link></li>
+        <li><router-link to="/fitness">个人记录</router-link>
+          <ul class="nav-menu-second">
+            <li><router-link to="/fitness">F</router-link></li>
+            <li><router-link to="/assets">A</router-link></li>
+          </ul>
+        </li>
       </ul>
     </div>
     <div class="navigationRight">
@@ -33,6 +39,19 @@ export default {
   height: 100%;
   margin: 0px;
 }
+
+.nav-menu-second{
+  margin: 0;
+  padding: 0;
+  /*list-style设定为none可以去除列表前的小圆点*/
+  list-style: none;
+  color: #ddd;
+  font-size: 20px;
+  margin: 0 10px;
+  padding: 5px 15px;
+  position: relative;
+}
+
 .navigationTop {
   width: auto;
   height: 60px;
@@ -59,11 +78,13 @@ export default {
   width: 90%;
   height: 900px;
 }
+.navigatin
 
 ol,
 ul {
   margin: 0;
   padding: 0;
+  /*list-style设定为none可以去除列表前的小圆点*/
   list-style: none;
   color: #ddd;
   font-size: 20px;

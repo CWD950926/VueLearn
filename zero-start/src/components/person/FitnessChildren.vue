@@ -1,12 +1,15 @@
 <template>
   <div class="fitnessChrldren">
-    <p>这是子页面</p>
-    <p><router-link to="/fitness">返回父页面</router-link></p>
-    <p><router-link to="/">返回首页</router-link></p>
+    <p><router-link to="/fitness">收起</router-link></p>
+    <p>3月目标 77kg</p>
+    <p>4月目标 72kg</p>
+    <p>5月目标 67kg</p>
+    <p>6月目标 63kg</p>
   </div>
 </template>
 
 <script>
+import axios from "axios";
 export default {
   name: "FitnessChildren",
   data() {

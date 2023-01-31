@@ -1,43 +1,7 @@
 <template>
   <div class="todoList">
     <h1>{{ msg }}</h1>
-    <section class="jumbotron">
-		<h3 class="jumbotron-heading">查询任务</h3>
-		<div>
-			<input type="text" placeholder="任务id" v-model="keyWord"/>&nbsp;
-			<button @click="searchUsers">查询</button>
-		</div>
-	</section>
 
-    <el-table
-      :data="tableData"
-      style="width: 80%">
-      <el-table-column
-        prop="time"
-        label="时间"
-        width="180">
-      </el-table-column>
-      <el-table-column
-        prop="version"
-        label="版本"
-        width="180">
-      </el-table-column>
-      <el-table-column
-        prop="taskDesc"
-        label="工作内容">
-        
-      </el-table-column>
-      <el-table-column
-        prop="priority"
-        label="优先级"
-        width="180">
-      </el-table-column>
-      <el-table-column
-        prop="workProcess"
-        label="开发进度"
-        width="180">
-      </el-table-column>
-    </el-table>
   </div>
 </template>
 
